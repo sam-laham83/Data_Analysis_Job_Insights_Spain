@@ -35,3 +35,24 @@ plt.show ()
 ##### The most sought-after skill for Data Analysts & Data Engineers, appearing in over half of job postings for both roles.
 #### 3. Technical Skills for Data Engineers: 
 ##### Data Engineers are expected to have advanced proficiency in tools such as AWS, Azure, & Spark, setting them apart from Data Analysts & to a lesser extent, Data Scientists.
+
+## Visualize Data
+
+```python
+from matplotlib.ticker import PercentFormatter
+df_plot = df_DA_Spain_percent.iloc[:, :5]
+
+sns.lineplot(data=df_plot, dashes=False, palette='tab10')
+
+ax = plt.gca()
+ax.yaxis.set_major_formatter(PercentFormatter())
+
+```
+![Trending Top 5 Data Analysis Skills in Spain](3_Project/Images/Trending%20Top%20Skills%20for%20Data%20Analaysts%20in%20Spain.png)
+
+***Bar graph visualizing the trending top skills for data analysts in Spain in 2023***
+
+### Insights:
+- SQL remains the most consistently in demand skill throughout the year, although it shows a gradual fluctuation in demand.
+- Both Python & Tableau show a relatively stable demand throughout the year with some flunctuations but they remain essential skills for data analysts.
+- Excel & Power BI while both less in demand compared to mostly SQL shows both upward & downward trend throught the year. 
